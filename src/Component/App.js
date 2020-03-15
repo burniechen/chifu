@@ -1,19 +1,27 @@
 import React from 'react';
 import {Container, Row, Col} from 'react-bootstrap';
-import TopNavBar from './TopNavBar'
+import TopNavBar from './TopNavBar';
+import ImageOverlay from './ImageOverlay';
+import CardSection from './CardSection';
+
 const App = () => (
 	<Container>
-		<Row>
-			<Col></Col>
-
-			<Col lg={10} xs={12}>
+		<Row className='bg-primary'>
+			<Col>
 				<TopNavBar />
 			</Col>
-
-			<Col></Col>
+		</Row>
+		
+		<Row className='bg-secondary'>
+			<Col>
+				<ImageOverlay />
+			</Col>
+		</Row>
+		
+		<Row className='d-flex justify-content-around bg-dark'>
+			<CardSection />
 		</Row>
 	</Container>
 );
-
 
 export default App;
